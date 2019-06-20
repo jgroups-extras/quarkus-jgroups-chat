@@ -1,2 +1,2 @@
 # quarkus-jgroups-chat
-Chat demo using the quarkus-jgroupsextension
+Chat demo using the quarkus-jgroups extension
