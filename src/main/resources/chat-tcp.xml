@@ -9,7 +9,7 @@
         xmlns="urn:org:jgroups"
         xsi:schemaLocation="urn:org:jgroups http://www.jgroups.org/schema/jgroups.xsd">
     <TCP
-         bind_addr="127.0.0.1"
+         bind_addr="${bind_addr:127.0.0.1}"
          bind_port="7800"
          recv_buf_size="${tcp.recv_buf_size:130k}"
          send_buf_size="${tcp.send_buf_size:130k}"
@@ -23,7 +23,7 @@
          thread_pool.keep_alive_time="30000"/>
 
     <TCPPING async_discovery="true"
-             initial_hosts="${jgroups.tcpping.initial_hosts:127.0.0.1[7800],127.0.0.1[7801]}"
+             initial_hosts="${initial_hosts:127.0.0.1[7800],127.0.0.1[7801]}"
              port_range="0"/>
     <MERGE3  min_interval="10000"
              max_interval="30000"/>
@@ -42,6 +42,5 @@
     <MFC max_credits="2M"
          min_threshold="0.4"/>
     <FRAG2 frag_size="60K"  />
-    <!--RSVP resend_interval="2000" timeout="10000"/-->
     <pbcast.STATE_TRANSFER/>
 </config>

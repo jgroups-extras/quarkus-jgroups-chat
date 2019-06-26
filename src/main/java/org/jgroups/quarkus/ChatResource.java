@@ -37,6 +37,7 @@ public class ChatResource extends ReceiverAdapter implements Publisher<String> {
 
     protected void init(@Observes StartupEvent evt) throws Exception {
         channel.setReceiver(this);
+        System.out.printf("-- view: %s\n", channel.getView());
     }
 
     protected void destroy(@Observes ShutdownEvent evt) {
