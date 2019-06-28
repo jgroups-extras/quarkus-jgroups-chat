@@ -92,6 +92,7 @@
                 <configuration>
                   <enableHttpUrlHandler>true</enableHttpUrlHandler>
                   <reportErrorsAtRuntime>true</reportErrorsAtRuntime>
+                  <enableJni>true</enableJni>
                 </configuration>
               </execution>
             </executions>
