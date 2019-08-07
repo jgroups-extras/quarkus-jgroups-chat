@@ -3,6 +3,13 @@ Chat demo using the quarkus-jgroups extension
 
 
 
+### Running the demo
+`mvn package` creates a runner JAR in the `target` directory. This can be run via the `java -jar JAR` command.
+`mvn package -Pnative` creates the native demo.
+
+Multiple instances can be run by changing the HTTP port, e.g.
+-Dquarkus.http.port=8001
+
 ### Misc
 Note that in order to generate a native image, the following properties need to be enabled on the quarkus-maven-plugin
 (in the POM):
